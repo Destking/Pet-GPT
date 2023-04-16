@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QMenu, QAction, QLabel, QGrap
     QTextEdit, QPushButton, QLineEdit, QHBoxLayout, QInputDialog, QDesktopWidget, QCheckBox
 
 from chat_model.chatdialog import ChatWindow
-# from chat_model.chatdialog_ChatGLM
+from chat_model.chatdialog_ChatGLM import ChatWindow_ChatGLM
 
 import configparser
 import random
@@ -137,7 +137,7 @@ class DesktopPet(QWidget):
     # new window, ChatGLM chatbox
     def show_chat_dialog_ChatGLM(self):
         print("ChatGLM test")
-        chat_window = ChatWindow(self, self.config)
+        chat_window = ChatWindow_ChatGLM(self, self.config)
         chat_window.show()
 
     #根据鼠标更新对话框位置

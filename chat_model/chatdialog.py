@@ -377,7 +377,7 @@ class ChatDialogBody(QDialog):
             pet_reply = f": 发生错误 - {response['error']}"
         else:
             pet_reply = ":对不起，我无法回应您的问题，请稍后再试。"
-        self.add_message("pet",pet_reply)
+        self.add_message("pet", pet_reply)
 
     def save_chat_history(self,message):
         with open(self.chat_log_file, "w", encoding="utf-8") as f:

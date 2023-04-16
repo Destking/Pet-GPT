@@ -35,7 +35,7 @@ class GenerateText:
         self.message_list.append({"user": text, "chater" : response})
         return response
 
-    def getText_test(self, text : str) -> str:
+    def getText_light(self, text : str) -> str:
         try:
             response, self.history = self.model.chat(self.tokenizer, text, history=self.history)
         except:
@@ -46,7 +46,7 @@ class GenerateText:
 
 if __name__ == '__main__':
    gt = GenerateText()
-   # print(gt.getText_test('请做一下自我介绍'))
+   # print(gt.getText('请做一下自我介绍'))
    while True:
        user_input = input("Input：")
-       print(gt.getText_test(user_input))
+       print(gt.getText_light(user_input))
