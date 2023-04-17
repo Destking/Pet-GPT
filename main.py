@@ -138,7 +138,9 @@ class DesktopPet(QWidget):
     def show_chat_dialog_ChatGLM(self):
         print("ChatGLM test")
         chat_window = ChatWindow_ChatGLM(self, self.config)
+        # chat_window = ChatWindow(self, self.config)
         chat_window.show()
+
 
     #根据鼠标更新对话框位置
     def update_chat_dialog_position(self):
